@@ -10,8 +10,19 @@ $ npm install --save romanify
 
 ## Usage
 
+ECMAScript 5:
+
 ```js
 var romanify = require('romanify')
+
+romanify(2016) // => 'MMXVI'
+romanify(0)    // => Error
+```
+
+ECMAScript 2015+:
+
+```js
+import romanify from 'romanify'
 
 romanify(2016) // => 'MMXVI'
 romanify(0)    // => Error
