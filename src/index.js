@@ -17,12 +17,12 @@ const numerals = {
 const indices = Object.keys(numerals)
 
 /**
- * [romanify description]
- * @param  {[type]} arabic [description]
- * @param  {String} acc    [description]
- * @return {[type]}        [description]
+ * Recursively convert Arabic-Indic numerals to their Roman equivalents.
+ * @param  {Number} arabic Numeral between 1-3999.
+ * @param  {String} acc    Accumulated output.
+ * @return {String}        Converted Roman numeral.
  */
-function recursiveRomanify(arabic, acc) {
+function recursiveRomanify(arabic, acc = '') {
   if (!arabic) {
     return acc
   }
@@ -33,9 +33,9 @@ function recursiveRomanify(arabic, acc) {
 }
 
 /**
- * [romanify description]
- * @param  {[type]} arabic [description]
- * @return {[type]}        [description]
+ * Convert Arabic-Indic numerals to their Roman equivalents.
+ * @param  {Number} arabic Numeral between 1-3999.
+ * @return {String}        Converted Roman numeral.
  */
 function romanify(arabic) {
   if (arabic < 1 || arabic > 3999) {
