@@ -1,0 +1,36 @@
+import test from 'ava'
+import romanify from '../src/'
+
+test('error', t => {
+  t.throws(() => romanify(-1))
+  t.throws(() => romanify(0))
+  t.throws(() => romanify(4000))
+})
+
+test('convert', t => {
+  t.is(romanify(1), 'I')
+  t.is(romanify(2), 'II')
+  t.is(romanify(3), 'III')
+  t.is(romanify(4), 'IV')
+  t.is(romanify(5), 'V')
+  t.is(romanify(6), 'VI')
+  t.is(romanify(7), 'VII')
+  t.is(romanify(8), 'VIII')
+  t.is(romanify(9), 'IX')
+  t.is(romanify(10), 'X')
+  t.is(romanify(14), 'XIV')
+  t.is(romanify(15), 'XV')
+  t.is(romanify(19), 'XIX')
+  t.is(romanify(20), 'XX')
+  t.is(romanify(50), 'L')
+  t.is(romanify(100), 'C')
+  t.is(romanify(400), 'CD')
+  t.is(romanify(500), 'D')
+  t.is(romanify(900), 'CM')
+  t.is(romanify(1000), 'M')
+  t.is(romanify(1888), 'MDCCCLXXXVIII')
+  t.is(romanify(2000), 'MM')
+  t.is(romanify(2016), 'MMXVI')
+  t.is(romanify(3000), 'MMM')
+  t.is(romanify(3999), 'MMMCMXCIX')
+})
