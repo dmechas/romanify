@@ -42,7 +42,7 @@ function romanify(arabic) {
     throw new Error('Romani ite domum.')
   }
 
-  return recursiveRomanify(arabic, '')
+  return recursiveRomanify(arabic)
 }
 
 export default romanify

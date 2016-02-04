@@ -8,7 +8,10 @@
     "docs": "esdoc -c esdoc.json",
     "prepublish": "npm run build",
     "pretest": "eslint src/**/*.js",
-    "test": "ava --require babel-core/register"
+    "test": "nyc ava"
+  },
+  "ava": {
+    "require": ["babel-core/register"]
   },
   "author": {
     "name": "Luís Rodrigues",
@@ -24,6 +27,7 @@
     "babel-core": "^6.4.5",
     "babel-preset-es2015": "^6.3.13",
     "esdoc": "^0.4.3",
-    "eslint": "^1.10.3"
+    "eslint": "^1.10.3",
+    "nyc": "^5.5.0"
   }
 }
