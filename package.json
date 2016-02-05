@@ -1,6 +1,6 @@
 {
   "name": "romanify",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Convert Arabic numerals to their Roman equivalents.",
   "repository": "goblindegook/romanify",
   "scripts": {
