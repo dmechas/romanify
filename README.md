@@ -13,7 +13,7 @@ $ npm install --save romanify
 ECMAScript 5:
 
 ```js
-var romanify = require('romanify')
+var romanify = require('romanify').default
 
 romanify(2016) // => 'MMXVI'
 romanify(0)    // => Error
